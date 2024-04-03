@@ -19,6 +19,10 @@ ydl_opts = {
 
 DISCORD_TOKEN = ""
 
+with open('token.txt') as f:
+    DISCORD_TOKEN = f.readline()
+
+
 intents = discord.Intents().all()
 client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!',intents=intents)
